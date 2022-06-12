@@ -6,6 +6,10 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+    const onClickHandler = ()=>{
+        console.log("clicked");
+    }
+
     return (
         <div className='login'>
             <Link to='/'>
@@ -33,7 +37,9 @@ function Login() {
                     see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
                 </p>
 
-                <button className='login__registerButton'>Create your Amazon Account</button>
+                <Link to='/login/signup'>
+                <button className='login__registerButton' onClick={onClickHandler}>Create your Amazon Account</button>
+                </Link>
             </div>
         </div>
     )
